@@ -71,7 +71,7 @@ var Articles = {
 
 		});
 	}
-}
+}	
 
 $( '#articles' ).live( 'pageinit',function(event){
   Articles.init({
@@ -79,6 +79,7 @@ $( '#articles' ).live( 'pageinit',function(event){
 	   container: $('ul.articles')	
 	})
 });
+
 $( '#twitter' ).live( 'pageinit',function(event){
   Twitter.init({
 	   template: $('#twitterTempl').html(),
