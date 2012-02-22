@@ -20,28 +20,76 @@
 
    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile.structure-1.0.1.min.css" />
    <link rel="stylesheet" href="css/ubtheme.css" />
+   <link rel="stylesheet" href="css/styles.css" />
    <link rel="apple-touch-icon" href="img/icon.png" />
 
-   <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-   <script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
 </head>
 
 <body>
- <div data-role="page">
+ <div data-role="page" id="twitter">
 
    <header data-role="header">
    		<h1>Ubelly</h1>
    </header>
 
    <div data-role="content">
-
+      <ul class="tweets" data-role="listview">
+         <script id="twitterTempl" type="text/x-handlebars-template">
+            {{#each this}}
+            <li>
+               <img src="{{thumb}}" alt="{{author}}" height="80px" width="80px">
+               <h3>{{author}}</h3>
+               <p><a href="{{url}}">{{tweet}}</a></p>
+            </li>
+            {{/each}}   
+         </script>
+      </ul>
    </div>
 
-   <footer data-role="footer" data-theme="b">
-   		<h3>www.ubelly.com</h3>
+    <footer data-role="footer" data-theme="b">
+         <div class="footer-nav" data-role="navbar">
+            <ul>
+               <li><a href="#articles" id="article-button" data-icon="custom">Articles</a></li>
+               <li><a href="#twitter" id="twitter-button" data-icon="custom">Twitter</a></li>
+            </ul>
+         </div>
    </footer>
 
  </div>
 
+ <div data-role="page" id="articles">
+
+   <header data-role="header">
+         <h1>Ubelly</h1>
+   </header>
+
+   <div data-role="content">
+      <ul class="articles" data-role="listview">
+         <script id="articleTempl" type="text/x-handlebars-template">
+            {{#each this}}
+            <li>
+               <h3><a href="{{link}}">{{title}}</a></h3>
+               <span class="ui-li-count">{{count}}</span>
+            </li>
+            {{/each}}   
+         </script>
+      </ul>
+   </div>
+
+   <footer data-role="footer" data-theme="b">
+         <div class="footer-nav" data-role="navbar">
+            <ul>
+               <li><a href="#articles" id="article-button" data-icon="custom">Articles</a></li>
+               <li><a href="#twitter" id="twitter-button" data-icon="custom">Twitter</a></li>
+            </ul>
+         </div>
+   </footer>
+
+ </div>
+
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+<script src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.0.beta.6.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>

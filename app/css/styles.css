@@ -1,0 +1,18 @@
+/*
+*
+*	Ubelly jQuery Mobile Styles
+*
+*/
+
+
+a{
+	text-decoration:none;
+	color: #ff3366;
+}
+
+/**** Footer Styles ****/
+
+.footer-nav .ui-btn .ui-btn-inner { padding-top: 40px !important; }
+.footer-nav .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+#article-button .ui-icon { background:  url(../img/179-notepad.png) 50% 50% no-repeat; background-size: 24px 22px; }
+#twitter-button .ui-icon { background:  url(../img/23-bird.png) 50% 50% no-repeat; background-size: 24px 16px;  }
