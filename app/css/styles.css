@@ -10,10 +10,6 @@ a{
 	color: #ff3366;
 }
 
-ul.articles, ul.tweets{
-	min-height:440px;
-}
-
 /**** Footer Styles ****/
 
 .footer-nav .ui-btn .ui-btn-inner { padding-top: 40px !important; }
